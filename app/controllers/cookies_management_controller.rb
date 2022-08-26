@@ -15,4 +15,18 @@ class CookiesManagementController < ApplicationController
   def show_cookie
   end
 
+  # ********************
+
+  def set_encrypted_cookie
+    cookies.encrypted[:expiration_date] = Date.tomorrow # => Thu, 20 Mar 2014
+    redirect_to action: 'read_encrypted_cookie'
+  end
+
+  def read_encrypted_cookie
+    # cookies.encrypted[:expiration_date] # => "2014-03-20"
+  end
+
+  def destroy_encrypted_cookie
+    cookies.delete(:expiration_date)
+  end
 end

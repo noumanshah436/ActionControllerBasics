@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'cookies_management/set_encrypted_cookie'
+  get 'cookies_management/read_encrypted_cookie'
+  get 'cookies_management/destroy_encrypted_cookie'
+
   get 'cookies_management/create_cookie'
   get 'cookies_management/destroy_cookie'
   get 'cookies_management/show_cookie'
