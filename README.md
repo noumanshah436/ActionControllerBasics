@@ -1,6 +1,5 @@
-# README
+# Action controller
 
-Action controller
 
 1) Params
 2) Sessions
